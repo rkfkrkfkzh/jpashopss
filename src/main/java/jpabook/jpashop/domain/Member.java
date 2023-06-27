@@ -1,11 +1,12 @@
 package jpabook.jpashop.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Member {
     @Id
+    @GeneratedValue
+    @Column(name = "member_id")
     private Long id;
     private String name;
     private String city;
